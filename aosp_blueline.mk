@@ -55,7 +55,7 @@ PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
 # Inherit some PixelBuilds stuff.
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_GAPPS_ARCH := arm64
-$(call inherit-product, vendor/pb/config/common_full_phone.mk)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
 # Inherit device configuration
@@ -80,3 +80,14 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 BUILD_FINGERPRINT := google/blueline/blueline:12/SP1A.210812.016.C2/8618562:user/release-keys
 
 $(call inherit-product, vendor/google/blueline/blueline-vendor.mk)
+
+# OFFICIAL Stuff
+ELIXIR_BUILD_TYPE := OFFICIAL
+BUILD_USERNAME := Elixir
+BUILD_HOSTNAME := Elixir
+
+WITH_GMS := true
+TARGET_BUILD_APERTURE_CAMERA := true
+
+# AOSP Recovery
+TARGET_USES_AOSP_RECOVERY := true
